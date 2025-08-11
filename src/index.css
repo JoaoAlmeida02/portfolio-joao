@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    /* Paleta Roxo Escuro */
+    --background: 250 15% 8%; /* #0F0A1A - Fundo principal roxo muito escuro */
+    --foreground: 250 15% 90%; /* #E6E0F0 - Texto principal */
+    
+    --card: 250 15% 10%; /* #1A1425 - Fundo secundário roxo escuro */
+    --card-foreground: 250 15% 90%; /* #E6E0F0 - Texto principal */
+    
+    --popover: 250 15% 10%; /* #1A1425 - Fundo secundário roxo escuro */
+    --popover-foreground: 250 15% 90%; /* #E6E0F0 - Texto principal */
+    
+    --primary: 250 85% 60%; /* #8B5CF6 - Cor primária roxa */
+    --primary-foreground: 250 15% 8%; /* #0F0A1A - Fundo principal */
+    
+    --primary-glow: 250 95% 70%; /* #A78BFA - Cor de destaque roxa clara */
+    --secondary: 250 10% 45%; /* #7C7A8A - Texto secundário */
+    --secondary-foreground: 250 15% 90%; /* #E6E0F0 - Texto principal */
+    
+    --muted: 250 15% 12%; /* #2A1F35 - Roxo escuro */
+    --muted-foreground: 250 10% 45%; /* #7C7A8A - Texto secundário */
+    
+    --accent: 250 85% 60%; /* #8B5CF6 - Cor primária roxa */
+    --accent-foreground: 250 15% 8%; /* #0F0A1A - Fundo principal */
+    
+    --destructive: 25 95% 53%; /* #F0883E - Cor de alerta */
+    --destructive-foreground: 250 15% 90%; /* #E6E0F0 - Texto principal */
+    
+    --border: 250 15% 12%; /* #2A1F35 - Roxo escuro */
+    --input: 250 15% 12%; /* #2A1F35 - Roxo escuro */
+    --ring: 250 85% 60%; /* #8B5CF6 - Cor primária roxa */
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(250 85% 60% / 0.1), hsl(250 95% 70% / 0.1));
+    --gradient-primary: linear-gradient(135deg, hsl(250, 85%, 60%), hsl(250, 95%, 70%));
+    --gradient-card: linear-gradient(135deg, hsl(250 15% 10% / 0.8), hsl(250 15% 12% / 0.9));
+    
+    /* Shadows */
+    --shadow-glow: 0 0 40px hsl(250 85% 60% / 0.3);
+    --shadow-card: 0 20px 60px hsl(250 15% 8% / 0.5);
+    --shadow-elegant: 0 10px 30px hsl(250 15% 8% / 0.3);
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 98%;
+
+    --sidebar-foreground: 240 5.3% 26.1%;
+
+    --sidebar-primary: 240 5.9% 10%;
+
+    --sidebar-primary-foreground: 0 0% 98%;
+
+    --sidebar-accent: 240 4.8% 95.9%;
+
+    --sidebar-accent-foreground: 240 5.9% 10%;
+
+    --sidebar-border: 250 15% 90%;
+
+    --sidebar-ring: 250 85% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer utilities {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+}
+
+@layer components {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+  
+  .gradient-primary {
+    background: var(--gradient-primary);
+  }
+  
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+  
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+  
+  .shadow-elegant {
+    box-shadow: var(--shadow-elegant);
+  }
+  
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  @keyframes float {
+    0%, 100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-20px);
+    }
+  }
+}
