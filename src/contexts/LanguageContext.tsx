@@ -13,8 +13,8 @@ const LanguageContext = createContext<LanguageContextType | undefined>(undefined
 // Traduções
 const translations = {
   pt: {
-    'hero.subtitle': 'Desenvolvedor Backend atualmente trabalhando na area',
-    'hero.description': 'Trabalho com python e node.js, confiavel, persistente e a cada dia aprendendo mais',
+    'hero.subtitle': 'Desenvolvedor Backend atualmente trabalhando na área',
+    'hero.description': 'Trabalho com Python e Node.js, confiável, persistente e aprendendo mais a cada dia',
     'hero.github': 'GitHub',
     'hero.linkedin': 'LinkedIn',
     'hero.instagram': 'Instagram',
